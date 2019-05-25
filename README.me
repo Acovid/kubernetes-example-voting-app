@@ -1,1 +1,16 @@
-Sample voting app - Cats and Dogs
+**Sample voting app - Cats and Dogs**
+
+To deploy this app on Kubernetes cluster, do following:
+
+1. From the command line which is connected to Kubernetes cluster (cloud or Minikube), clone the app from Github: *git clone https://github.com/Acovid/kubernetes-example-voting-app.git*
+2. Move to the directory with the code: *cd kubernetes-example-voting-app*
+3. Create Kubernetes objects by running these commands, one after another:
+   *kubectl create -f voting-app-pod.yml*
+   *kubectl create -f voting-app-service.yml*
+   *kubectl create -f redis-pod.yml*
+   *kubectl create -f redis-service.yml*
+   *kubectl create -f postgres-pod.yml*
+   *kubectl create -f postgres-service.yml*
+   *kubectl create -f worker-app-pod.yml*
+   *kubectl create -f result-app-pod.yml*
+   *kubectl create -f result-app-service.yml*
